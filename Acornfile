@@ -1,0 +1,17 @@
+containers: drupal: {
+	image: "drupal:latest"
+	ports: publish: "80/http"
+	env: {
+		MYSQL_USER: "@{service.db.secrets.admin.username}"
+		MYSQL_PASSWORD: "@{service.db.secrets.admin.password}"
+		MYSQL_DATABASE: "@{service.db.data.dbName}"
+    	DRUPAL_DATABASE_HOST: "@{service.db.address}"
+    	MYSQL_HOST:  "@{service.db.address}"
+	}
+}
+
+services: db: {
+	image: "ghcr.io/acorn-io/mariadb:v10.11.5-2"
+	serviceArgs: dbName: "drupal"
+
+}
