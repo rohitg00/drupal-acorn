@@ -9,7 +9,7 @@ You can deploy the sample web app on the Acorn SaaS Platform to test the Applica
 
 Let us have a close look at the Acornfile and see what is defined:
 
-- **Containers**: These containers will be deployed for running Drupal. We have two containers, one for Drupal and the other for Mariadb. We are setting the environment variables returned from the MariaDB Acorn service for the Dupal container.
+- **Containers**: These containers will be deployed for running Drupal. We have two containers, one for Drupal and the other for Mariadb. We are setting the environment variables returned from the MariaDB Acorn service for the Drupal container.
 - **Services**: Acorn services are external services your application can utilize. In this case, we use the [MariaDB Acorn service](https://github.com/acorn-io/mariadb/pkgs/container/mariadb).
 
 ## Steps
